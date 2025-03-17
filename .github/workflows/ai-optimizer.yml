@@ -1,0 +1,10 @@
+name: KI-Optimierung & Fehleranalyse
+on: [push, pull_request]
+jobs:
+  ai-analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code abrufen
+        uses: actions/checkout@v3
+      - name: Fehlerlogs analysieren
+        run: ./ai-optimizer/analyze_logs.sh

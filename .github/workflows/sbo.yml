@@ -1,0 +1,10 @@
+name: SBO Boot Tests
+on: [push, pull_request]
+jobs:
+  sbo-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code abrufen
+        uses: actions/checkout@v3
+      - name: SBO Boot-Test ausführen
+        run: ./bootloader/sbo_test.sh
